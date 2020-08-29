@@ -27,5 +27,10 @@ int main()
 
     cin >> e;
     cout << e << endl;
+
+    cout << (e == d) << endl;
+    cout << (e == a) << endl;
+    cout << (e == b) << endl;
+    cout << (e == c) << endl;
     return 0;
 }

@@ -5,7 +5,7 @@ _DEPS=Complex.h # list of .h file
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS)) # concate include path with the .h file names 
 ODIR=obj
 OBJ=main7-2.o Complex.o # .o files
-BINARIES=main7-2
+BINARIES=main7-2 main7-9
 
 all: main7-2
 
@@ -16,6 +16,13 @@ all: main7-2
 main7-2: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^ 
 
+main7-9: main7-9.o
+	$(CC) -o $(CFLAGS) -o $@ $^ 
+
+main7-16:main7-16.o String.o
+	$(CC) -o $(CFLAGS) -o $@ $^ 
+main7-17:main7-17.o
+	$(CC) -o $(CFLAGS) -o $@ $^ 
 # The .PHONY rule keeps make from doing something with a file named clean.
 .PHONY: clean
 

@@ -22,10 +22,12 @@ public:
     Complex& operator++ ();
     // 后置++
     Complex operator++(int);
+    Complex &operator+=(const Complex &x);
+    bool operator==(const Complex &x);
+    bool operator!=(const Complex &x);
+    // protected: // 只有自己和继承者可以用
 
-// protected: // 只有自己和继承者可以用
-
-// 给ostream用不算成员变量。只能用friend
+    // 给ostream用不算成员变量。只能用friend
     // cout
     friend ostream& operator<<(ostream& os, const Complex &x);
     // cin

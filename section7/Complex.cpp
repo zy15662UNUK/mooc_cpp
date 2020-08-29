@@ -51,7 +51,6 @@ void Complex::setImage(double d)
 Complex Complex::operator+(const Complex &x)
 {
     Complex ans;
-    cout << "SSS" << endl;
     ans._real = _real + x._real;
     ans._image = _image + x._image;
     return ans;
@@ -75,6 +74,7 @@ Complex& Complex::operator++()
     _image ++;
     return *this;
 }
+
 // 后置++
 Complex Complex::operator++(int)
 {
@@ -98,4 +98,19 @@ istream &operator>>(istream &is, Complex &x)
 {
     is >> x._real >> x._image;
     return is;
+}
+
+Complex &Complex::operator+=(const Complex &x)
+{
+    _real += x.getReal();
+    _image += x.getImage();
+    return *this;
+}
+bool Complex::operator==(const Complex &x)
+{
+    return _real == x._real && _image == x._image;
+}
+bool Complex::operator!=(const Complex &x)
+{
+    return !(_real == x._real && _image == x._image);
 }
