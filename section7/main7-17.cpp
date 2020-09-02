@@ -47,7 +47,7 @@ public:
     double area() const
     {
         return _height * _len * 0.5;
-    }
+    } 
 
 private:
     double _len;
